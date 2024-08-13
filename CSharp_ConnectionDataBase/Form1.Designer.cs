@@ -32,18 +32,20 @@
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
-            button5 = new Button();
-            button6 = new Button();
+            maTen = new TextBox();
+            hoTen = new TextBox();
+            namSinh = new TextBox();
+            queQuan = new TextBox();
+            btnThoat = new Button();
+            btnSua = new Button();
+            btnTim = new Button();
+            btnXoa = new Button();
+            btnReset = new Button();
+            btnThem = new Button();
             dgvQLTT = new DataGridView();
-            button7 = new Button();
+            btnLamMoi = new Button();
+            ID = new TextBox();
+            label5 = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvQLTT).BeginInit();
             SuspendLayout();
             // 
@@ -52,25 +54,25 @@
             label1.AutoSize = true;
             label1.Location = new Point(28, 39);
             label1.Name = "label1";
-            label1.Size = new Size(59, 18);
+            label1.Size = new Size(75, 23);
             label1.TabIndex = 0;
             label1.Text = "Mã tên:";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(28, 116);
+            label2.Location = new Point(28, 109);
             label2.Name = "label2";
-            label2.Size = new Size(74, 18);
+            label2.Size = new Size(96, 23);
             label2.TabIndex = 0;
             label2.Text = "Năm sinh:";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(28, 152);
+            label3.Location = new Point(28, 148);
             label3.Name = "label3";
-            label3.Size = new Size(77, 18);
+            label3.Size = new Size(100, 23);
             label3.TabIndex = 0;
             label3.Text = "Quê quán:";
             // 
@@ -79,130 +81,157 @@
             label4.AutoSize = true;
             label4.Location = new Point(28, 73);
             label4.Name = "label4";
-            label4.Size = new Size(57, 18);
+            label4.Size = new Size(73, 23);
             label4.TabIndex = 0;
             label4.Text = "Họ tên:";
             // 
-            // textBox1
+            // maTen
             // 
-            textBox1.Location = new Point(127, 36);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(152, 26);
-            textBox1.TabIndex = 1;
+            maTen.Location = new Point(127, 36);
+            maTen.Name = "maTen";
+            maTen.Size = new Size(152, 30);
+            maTen.TabIndex = 1;
             // 
-            // textBox2
+            // hoTen
             // 
-            textBox2.Location = new Point(127, 70);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(152, 26);
-            textBox2.TabIndex = 1;
+            hoTen.Location = new Point(127, 70);
+            hoTen.Name = "hoTen";
+            hoTen.Size = new Size(152, 30);
+            hoTen.TabIndex = 1;
             // 
-            // textBox3
+            // namSinh
             // 
-            textBox3.Location = new Point(127, 113);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(152, 26);
-            textBox3.TabIndex = 1;
+            namSinh.Location = new Point(127, 106);
+            namSinh.Name = "namSinh";
+            namSinh.Size = new Size(152, 30);
+            namSinh.TabIndex = 1;
             // 
-            // textBox4
+            // queQuan
             // 
-            textBox4.Location = new Point(127, 149);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(152, 26);
-            textBox4.TabIndex = 1;
+            queQuan.Location = new Point(127, 145);
+            queQuan.Name = "queQuan";
+            queQuan.Size = new Size(152, 30);
+            queQuan.TabIndex = 1;
             // 
-            // button1
+            // btnThoat
             // 
-            button1.Location = new Point(438, 39);
-            button1.Name = "button1";
-            button1.Size = new Size(83, 32);
-            button1.TabIndex = 2;
-            button1.Text = "Thoát";
-            button1.UseVisualStyleBackColor = true;
+            btnThoat.Location = new Point(460, 34);
+            btnThoat.Name = "btnThoat";
+            btnThoat.Size = new Size(83, 32);
+            btnThoat.TabIndex = 2;
+            btnThoat.Text = "Thoát";
+            btnThoat.UseVisualStyleBackColor = true;
+            btnThoat.Click += btnThoat_Click;
             // 
-            // button2
+            // btnSua
             // 
-            button2.Location = new Point(359, 194);
-            button2.Name = "button2";
-            button2.Size = new Size(83, 32);
-            button2.TabIndex = 2;
-            button2.Text = "Sửa";
-            button2.UseVisualStyleBackColor = true;
+            btnSua.Location = new Point(310, 106);
+            btnSua.Name = "btnSua";
+            btnSua.Size = new Size(83, 32);
+            btnSua.TabIndex = 2;
+            btnSua.Text = "Sửa";
+            btnSua.UseVisualStyleBackColor = true;
+            btnSua.Click += btnSua_Click;
             // 
-            // button3
+            // btnTim
             // 
-            button3.Location = new Point(581, 194);
-            button3.Name = "button3";
-            button3.Size = new Size(83, 32);
-            button3.TabIndex = 2;
-            button3.Text = "Tìm kiếm";
-            button3.UseVisualStyleBackColor = true;
+            btnTim.Location = new Point(519, 135);
+            btnTim.Name = "btnTim";
+            btnTim.Size = new Size(83, 32);
+            btnTim.TabIndex = 2;
+            btnTim.Text = "Tìm kiếm";
+            btnTim.UseVisualStyleBackColor = true;
+            btnTim.Click += btnTim_Click;
             // 
-            // button4
+            // btnXoa
             // 
-            button4.Location = new Point(467, 194);
-            button4.Name = "button4";
-            button4.Size = new Size(83, 32);
-            button4.TabIndex = 2;
-            button4.Text = "Xóa";
-            button4.UseVisualStyleBackColor = true;
+            btnXoa.Location = new Point(310, 68);
+            btnXoa.Name = "btnXoa";
+            btnXoa.Size = new Size(83, 32);
+            btnXoa.TabIndex = 2;
+            btnXoa.Text = "Xóa";
+            btnXoa.UseVisualStyleBackColor = true;
+            btnXoa.Click += btnXoa_Click;
             // 
-            // button5
+            // btnReset
             // 
-            button5.Location = new Point(127, 194);
-            button5.Name = "button5";
-            button5.Size = new Size(83, 32);
-            button5.TabIndex = 2;
-            button5.Text = "Reset";
-            button5.UseVisualStyleBackColor = true;
+            btnReset.Location = new Point(310, 146);
+            btnReset.Name = "btnReset";
+            btnReset.Size = new Size(83, 32);
+            btnReset.TabIndex = 2;
+            btnReset.Text = "Reset";
+            btnReset.UseVisualStyleBackColor = true;
+            btnReset.Click += btnReset_Click;
             // 
-            // button6
+            // btnThem
             // 
-            button6.Location = new Point(243, 194);
-            button6.Name = "button6";
-            button6.Size = new Size(83, 32);
-            button6.TabIndex = 2;
-            button6.Text = "Thêm";
-            button6.UseVisualStyleBackColor = true;
+            btnThem.Location = new Point(310, 31);
+            btnThem.Name = "btnThem";
+            btnThem.Size = new Size(83, 32);
+            btnThem.TabIndex = 2;
+            btnThem.Text = "Thêm";
+            btnThem.UseVisualStyleBackColor = true;
+            btnThem.Click += btnThem_Click;
             // 
             // dgvQLTT
             // 
             dgvQLTT.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvQLTT.Dock = DockStyle.Bottom;
-            dgvQLTT.Location = new Point(0, 241);
+            dgvQLTT.Location = new Point(0, 202);
             dgvQLTT.Name = "dgvQLTT";
-            dgvQLTT.Size = new Size(695, 237);
+            dgvQLTT.RowHeadersWidth = 51;
+            dgvQLTT.Size = new Size(806, 276);
             dgvQLTT.TabIndex = 3;
+            dgvQLTT.CellContentClick += dgvQLTT_CellContentClick;
             // 
-            // button7
+            // btnLamMoi
             // 
-            button7.Location = new Point(548, 39);
-            button7.Name = "button7";
-            button7.Size = new Size(83, 32);
-            button7.TabIndex = 2;
-            button7.Text = "Trở về";
-            button7.UseVisualStyleBackColor = true;
+            btnLamMoi.Location = new Point(561, 34);
+            btnLamMoi.Name = "btnLamMoi";
+            btnLamMoi.Size = new Size(106, 32);
+            btnLamMoi.TabIndex = 2;
+            btnLamMoi.Text = "Làm mới";
+            btnLamMoi.UseVisualStyleBackColor = true;
+            btnLamMoi.Click += btnLamMoi_Click;
+            // 
+            // ID
+            // 
+            ID.Location = new Point(519, 99);
+            ID.Name = "ID";
+            ID.Size = new Size(125, 30);
+            ID.TabIndex = 4;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(464, 103);
+            label5.Name = "label5";
+            label5.Size = new Size(37, 23);
+            label5.TabIndex = 0;
+            label5.Text = "ID:";
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 18F);
+            AutoScaleDimensions = new SizeF(10F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(695, 478);
+            ClientSize = new Size(806, 478);
+            Controls.Add(ID);
             Controls.Add(dgvQLTT);
-            Controls.Add(button6);
-            Controls.Add(button5);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button7);
-            Controls.Add(button1);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(btnThem);
+            Controls.Add(btnReset);
+            Controls.Add(btnXoa);
+            Controls.Add(btnTim);
+            Controls.Add(btnSua);
+            Controls.Add(btnLamMoi);
+            Controls.Add(btnThoat);
+            Controls.Add(queQuan);
+            Controls.Add(namSinh);
+            Controls.Add(hoTen);
+            Controls.Add(maTen);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label4);
+            Controls.Add(label5);
             Controls.Add(label1);
             Font = new Font("Tahoma", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Margin = new Padding(3, 4, 3, 4);
@@ -221,17 +250,19 @@
         private Label label2;
         private Label label3;
         private Label label4;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
-        private Button button5;
-        private Button button6;
+        private TextBox maTen;
+        private TextBox hoTen;
+        private TextBox namSinh;
+        private TextBox queQuan;
+        private Button btnThoat;
+        private Button btnSua;
+        private Button btnTim;
+        private Button btnXoa;
+        private Button btnReset;
+        private Button btnThem;
         private DataGridView dgvQLTT;
-        private Button button7;
+        private Button btnLamMoi;
+        private TextBox ID;
+        private Label label5;
     }
 }
